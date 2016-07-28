@@ -1,13 +1,11 @@
 Autoloading Standard
 ====================
 
-> **Deprecated** - As of 2014-10-21 PSR-0 has been marked as deprecated. [PSR-4] is now recommended
-as an alternative.
+> **已过时** - 截止 2014-10-21 PSR-0 已经标记为弃用。推荐 [PSR-4] 作为替代。
 
 [PSR-4]: http://www.php-fig.org/psr/psr-4/
 
-The following describes the mandatory requirements that must be adhered
-to for autoloader interoperability.
+下面介绍了必须遵守的autoloader规范。
 
 Mandatory
 ---------
