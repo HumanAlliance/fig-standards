@@ -1,4 +1,4 @@
-Autoloading Standard
+自动加载标准
 ====================
 
 > **已过时** - 截止 2014-10-21 PSR-0 已经标记为弃用。推荐 [PSR-4] 作为替代。
@@ -7,24 +7,18 @@ Autoloading Standard
 
 下面介绍了必须遵守的autoloader规范。
 
-Mandatory
+规范
 ---------
 
-* A fully-qualified namespace and class must have the following
-  structure `\<Vendor Name>\(<Namespace>\)*<Class Name>`
-* Each namespace must have a top-level namespace ("Vendor Name").
-* Each namespace can have as many sub-namespaces as it wishes.
-* Each namespace separator is converted to a `DIRECTORY_SEPARATOR` when
-  loading from the file system.
-* Each `_` character in the CLASS NAME is converted to a
-  `DIRECTORY_SEPARATOR`. The `_` character has no special meaning in the
-  namespace.
-* The fully-qualified namespace and class is suffixed with `.php` when
-  loading from the file system.
-* Alphabetic characters in vendor names, namespaces, and class names may
-  be of any combination of lower case and upper case.
+* 一个标准的命名空间和类必须具有以下结构 `\<Vendor Name(组织)>\(<Namespace(命名空间)>\)*<Class Name(类)>`。
+* 每个命名空间必须有一个顶级命名空间 ("Vendor Name")。
+* 每个命名空间可以有多个子命名空间。
+* 当加载文件时，每个命名空间分隔符会被转换为一个 `DIRECTORY_SEPARATOR(PHP内置常量，目录分隔符)` 。
+* 类名中的 `_` 会被转换为一个 `DIRECTORY_SEPARATOR`。 命名空间中的`_` 没有特殊意义。
+* 当加载文件时，标准的命名空间和类会加上后缀 `.php`。
+* 组织、命名空间、类可以是由大小写字母组成
 
-Examples
+ 示例
 --------
 
 * `\Doctrine\Common\IsolatedClassLoader` => `/path/to/project/lib/vendor/Doctrine/Common/IsolatedClassLoader.php`
