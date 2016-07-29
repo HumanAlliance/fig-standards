@@ -32,7 +32,7 @@
 * `\namespace\package\Class_Name` => `/path/to/project/lib/vendor/namespace/package/Class/Name.php`
 * `\namespace\package_name\Class_Name` => `/path/to/project/lib/vendor/namespace/package_name/Class/Name.php`
 
-以上是自动加载的通用最低标准，可通过示例函数 SplClassLoader 载入 PHP 5.3 的类，来验证是否符合以上规范。
+以上是 autoloader 的通用最低标准，可通过示例函数 SplClassLoader 载入 PHP 5.3 的类，来验证是否符合以上规范。
 
 实例
 ----------------------
