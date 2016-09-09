@@ -70,14 +70,14 @@
 _**说明:** A = 发布 | D = 草案 | R = 审议 | X = 过时_
 
 [workflow]: http://www.php-fig.org/bylaws/psr-workflow/
-[psr0]: /psr/psr-0/
-[psr1]: /psr/psr-1/
-[psr2]: /psr/psr-2/
-[psr3]: /psr/psr-3/
-[psr4]: /psr/psr-4/
+[psr0]: /accepted/PSR-0.md
+[psr1]: /accepted/PSR-1.md
+[psr2]: /accepted/PSR-2.md
+[psr3]: /accepted/PSR-3.md
+[psr4]: /accepted/PSR-4.md
 [psr5]: https://github.com/phpDocumentor/fig-standards/tree/master/proposed
-[psr6]: /psr/psr-6/
-[psr7]: /psr/psr-7/
+[psr6]: /accepted/PSR-6.md
+[psr7]: /accepted/PSR-7.md
 [psr8]: https://github.com/php-fig/fig-standards/blob/master/proposed/psr-8-hug
 [psr9]: https://github.com/php-fig/fig-standards/blob/master/proposed/security-disclosure-publication.md
 [psr10]: https://github.com/php-fig/fig-standards/blob/master/proposed/security-reporting-process.md
