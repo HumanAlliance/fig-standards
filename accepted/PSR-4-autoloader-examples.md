@@ -1,64 +1,64 @@
-Example Implementations of PSR-4
-================================
+PSR-4 实例
+========
 
-The following examples illustrate PSR-4 compliant code:
+以下实例是 PSR-4 标准代码：
 
-Closure Example
----------------
+完整示例
+----
 
 ~~~php
 <?php
 /**
- * An example of a project-specific implementation.
+ * An example of a project-specific implementation.具体项目中的实施例子
  *
  * After registering this autoload function with SPL, the following line
  * would cause the function to attempt to load the \Foo\Bar\Baz\Qux class
- * from /path/to/project/src/Baz/Qux.php:
+ * from /path/to/project/src/Baz/Qux.php:用spl自动加载
  *
  *      new \Foo\Bar\Baz\Qux;
  *
- * @param string $class The fully-qualified class name.
+ * @param string $class The fully-qualified class name.完全合格的类名
  * @return void
  */
 spl_autoload_register(function ($class) {
 
-    // project-specific namespace prefix
+    // project-specific namespace prefix 命名空间前缀
     $prefix = 'Foo\\Bar\\';
 
-    // base directory for the namespace prefix
+    // base directory for the namespace prefix 命名空间前缀对应的基础文件目录
     $base_dir = __DIR__ . '/src/';
 
-    // does the class use the namespace prefix?
+    // does the class use the namespace prefix?检查完整类名是否用了命名空间前缀（命名空间前缀包括在类名的前部分）
     $len = strlen($prefix);
     if (strncmp($prefix, $class, $len) !== 0) {
-        // no, move to the next registered autoloader
+        // no, move to the next registered autoloader 如果不存在 转到下个自动加载
         return;
     }
 
-    // get the relative class name
+    // get the relative class name 获取相对类名
     $relative_class = substr($class, $len);
 
     // replace the namespace prefix with the base directory, replace namespace
     // separators with directory separators in the relative class name, append
-    // with .php
+    // with .php 根据命名空间前缀对应的文件目录进行替换，并加上php
     $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
 
-    // if the file exists, require it
+    // if the file exists, require it如果文件存在，进行引用加载
     if (file_exists($file)) {
         require $file;
     }
 });
 ~~~
 
-Class Example
--------------
+类的示例
+----
 
 The following is an example class implementation to handle multiple
-namespaces:
+namespaces:下面是个例类实现来处理多命名空间
 
 ~~~php
 <?php
-namespace Example;
+namespace Example;命名空间例子
 
 /**
  * An example of a general-purpose implementation that includes the optional

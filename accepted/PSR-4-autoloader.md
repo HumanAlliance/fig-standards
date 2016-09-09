@@ -52,8 +52,8 @@
 | \Symfony\Core\Request         | Symfony\Core       | ./vendor/Symfony/Core/   | ./vendor/Symfony/Core/Request.php
 | \Zend\Acl                     | Zend               | /usr/includes/Zend/      | /usr/includes/Zend/Acl.php
 
-本示例按照规范实现了自动加载，更多示例，请参阅 [examples file][]. 本示例 不 属规范的一部分并且随时会有所变动
+本示例按照规范实现了自动加载，更多示例，请参阅 [示例文件][]. 本示例 不 属规范的一部分并且随时会有所变动
 
 [自动加载]: http://php.net/autoload
 [PSR-0]: https://github.com/HumanAlliance/fig-standards/blob/master/accepted/PSR-0.md
-[examples file]: https://github.com/HumanAlliance/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md
+[示例文件]: https://github.com/HumanAlliance/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md

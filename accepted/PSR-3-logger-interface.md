@@ -148,16 +148,16 @@ and a test suite to verify your implementation is provided as part of the
 namespace Psr\Log;
 
 /**
- * Describes a logger instance
+ * Describes a logger instance 日志实例
  *
- * The message MUST be a string or object implementing __toString().
+ * The message MUST be a string or object implementing __toString().消息 必须 是字符串或对象 通过_toString()来保证实施
  *
  * The message MAY contain placeholders in the form: {foo} where foo
- * will be replaced by the context data in key "foo".
+ * will be replaced by the context data in key "foo".消息 可以 包含占位符。 占位符会被内容的功能代替
  *
  * The context array can contain arbitrary data, the only assumption that
  * can be made by implementors is that if an Exception instance is given
- * to produce a stack trace, it MUST be in a key named "exception".
+ * to produce a stack trace, it MUST be in a key named "exception".其他文本可以包含任何数据，如果出现异常错误，必须命名为 异常
  *
  * See https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
  * for the full interface specification.
@@ -165,7 +165,7 @@ namespace Psr\Log;
 interface LoggerInterface
 {
     /**
-     * System is unusable.
+     * System is unusable.系统不用
      *
      * @param string $message
      * @param array $context
@@ -174,10 +174,10 @@ interface LoggerInterface
     public function emergency($message, array $context = array());
 
     /**
-     * Action must be taken immediately.
+     * Action must be taken immediately.必须采取措施
      *
      * Example: Entire website down, database unavailable, etc. This should
-     * trigger the SMS alerts and wake you up.
+     * trigger the SMS alerts and wake you up.如网站挂掉，数据库不可用等。应该有个短信trigger提醒。 
      *
      * @param string $message
      * @param array $context
@@ -186,9 +186,9 @@ interface LoggerInterface
     public function alert($message, array $context = array());
 
     /**
-     * Critical conditions.
+     * Critical conditions.关键条件
      *
-     * Example: Application component unavailable, unexpected exception.
+     * Example: Application component unavailable, unexpected exception.如 应用组件不可用 系统异常
      *
      * @param string $message
      * @param array $context
@@ -198,7 +198,7 @@ interface LoggerInterface
 
     /**
      * Runtime errors that do not require immediate action but should typically
-     * be logged and monitored.
+     * be logged and monitored.运行错误不需要立即采取行动，但应该记录和监控
      *
      * @param string $message
      * @param array $context
@@ -207,10 +207,10 @@ interface LoggerInterface
     public function error($message, array $context = array());
 
     /**
-     * Exceptional occurrences that are not errors.
+     * Exceptional occurrences that are not errors.特殊事件，但不是错误
      *
      * Example: Use of deprecated APIs, poor use of an API, undesirable things
-     * that are not necessarily wrong.
+     * that are not necessarily wrong.如api错误 不建议的api
      *
      * @param string $message
      * @param array $context
@@ -219,7 +219,7 @@ interface LoggerInterface
     public function warning($message, array $context = array());
 
     /**
-     * Normal but significant events.
+     * Normal but significant events.正常但显著的事件
      *
      * @param string $message
      * @param array $context
@@ -228,9 +228,9 @@ interface LoggerInterface
     public function notice($message, array $context = array());
 
     /**
-     * Interesting events.
+     * Interesting events.关注的事件
      *
-     * Example: User logs in, SQL logs.
+     * Example: User logs in, SQL logs.用户登录 sql
      *
      * @param string $message
      * @param array $context
@@ -239,7 +239,7 @@ interface LoggerInterface
     public function info($message, array $context = array());
 
     /**
-     * Detailed debug information.
+     * Detailed debug information.详细的调试信息
      *
      * @param string $message
      * @param array $context
@@ -248,7 +248,7 @@ interface LoggerInterface
     public function debug($message, array $context = array());
 
     /**
-     * Logs with an arbitrary level.
+     * Logs with an arbitrary level.选择等级
      *
      * @param mixed $level
      * @param string $message
@@ -268,12 +268,12 @@ interface LoggerInterface
 namespace Psr\Log;
 
 /**
- * Describes a logger-aware instance
+ * Describes a logger-aware instance 记录器实例
  */
 interface LoggerAwareInterface
 {
     /**
-     * Sets a logger instance on the object
+     * Sets a logger instance on the object 设置一个记录器对象
      *
      * @param LoggerInterface $logger
      * @return null
@@ -291,17 +291,17 @@ interface LoggerAwareInterface
 namespace Psr\Log;
 
 /**
- * Describes log levels
+ * Describes log levels 日志等级描述
  */
 class LogLevel
 {
-    const EMERGENCY = 'emergency';
-    const ALERT     = 'alert';
-    const CRITICAL  = 'critical';
-    const ERROR     = 'error';
-    const WARNING   = 'warning';
-    const NOTICE    = 'notice';
-    const INFO      = 'info';
-    const DEBUG     = 'debug';
+    const EMERGENCY = 'emergency';//紧急
+    const ALERT     = 'alert';//警报
+    const CRITICAL  = 'critical';//关键
+    const ERROR     = 'error';//错误
+    const WARNING   = 'warning';//警告
+    const NOTICE    = 'notice';//通知
+    const INFO      = 'info';//信息
+    const DEBUG     = 'debug';//调试
 }
 ~~~
